@@ -1,0 +1,213 @@
+{
+  "asOf": "2026-11-14T12:30:00Z",
+  "policy": {
+    "ackDeadlineMs": 60000,
+    "staleAfterMs": 120000,
+    "maxDeliveries": 3
+  },
+  "events": [
+    {
+      "id": "e001",
+      "at": "2026-11-14T12:00:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-100",
+      "deliveryId": "d-100",
+      "state": "received"
+    },
+    {
+      "id": "e002",
+      "at": "2026-11-14T12:01:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-100",
+      "deliveryId": "d-100",
+      "state": "started"
+    },
+    {
+      "id": "e003",
+      "at": "2026-11-14T12:02:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-100",
+      "deliveryId": "d-100",
+      "state": "effect_committed",
+      "effectId": "effect-100"
+    },
+    {
+      "id": "e004",
+      "at": "2026-11-14T12:03:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-100",
+      "deliveryId": "d-100",
+      "state": "acknowledged"
+    },
+    {
+      "id": "e005",
+      "at": "2026-11-14T12:00:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-200",
+      "deliveryId": "d-200",
+      "state": "received"
+    },
+    {
+      "id": "e006",
+      "at": "2026-11-14T12:01:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-200",
+      "deliveryId": "d-200",
+      "state": "received"
+    },
+    {
+      "id": "e007",
+      "at": "2026-11-14T12:02:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-200",
+      "deliveryId": "d-200",
+      "state": "effect_committed",
+      "effectId": "effect-200"
+    },
+    {
+      "id": "e008",
+      "at": "2026-11-14T12:03:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-200",
+      "deliveryId": "d-200",
+      "state": "acknowledged"
+    },
+    {
+      "id": "e009",
+      "at": "2026-11-14T12:00:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-300",
+      "deliveryId": "d-300",
+      "state": "received"
+    },
+    {
+      "id": "e010",
+      "at": "2026-11-14T12:01:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-300",
+      "deliveryId": "d-300",
+      "state": "effect_committed",
+      "effectId": "effect-300"
+    },
+    {
+      "id": "e011",
+      "at": "2026-11-14T12:00:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-400",
+      "deliveryId": "d-400",
+      "state": "received"
+    },
+    {
+      "id": "e012",
+      "at": "2026-11-14T12:01:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-400",
+      "deliveryId": "d-400",
+      "state": "effect_committed",
+      "effectId": "effect-400-a"
+    },
+    {
+      "id": "e013",
+      "at": "2026-11-14T12:02:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-400",
+      "deliveryId": "d-400-retry",
+      "state": "received"
+    },
+    {
+      "id": "e014",
+      "at": "2026-11-14T12:03:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-400",
+      "deliveryId": "d-400-retry",
+      "state": "effect_committed",
+      "effectId": "effect-400-b"
+    },
+    {
+      "id": "e015",
+      "at": "2026-11-14T12:04:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-400",
+      "deliveryId": "d-400-retry",
+      "state": "acknowledged"
+    },
+    {
+      "id": "e016",
+      "at": "2026-11-14T12:00:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-500",
+      "deliveryId": "d-500",
+      "state": "received"
+    },
+    {
+      "id": "e017",
+      "at": "2026-11-14T12:01:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-500",
+      "deliveryId": "d-500",
+      "state": "started"
+    },
+    {
+      "id": "e018",
+      "at": "2026-11-14T12:00:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-600",
+      "deliveryId": "d-600",
+      "state": "received"
+    },
+    {
+      "id": "e019",
+      "at": "2026-11-14T12:01:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-600",
+      "deliveryId": "d-600",
+      "state": "failed"
+    },
+    {
+      "id": "e020",
+      "at": "2026-11-14T12:02:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-600",
+      "deliveryId": "d-600",
+      "state": "dead_lettered"
+    },
+    {
+      "id": "e021",
+      "at": "2026-11-14T12:00:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-700",
+      "deliveryId": "d-700",
+      "state": "received"
+    },
+    {
+      "id": "e022",
+      "at": "2026-11-14T12:01:00Z",
+      "tenant": "demo",
+      "route": "invoices",
+      "operationId": "op-700",
+      "deliveryId": "d-700",
+      "state": "acknowledged"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+name: Integration delivery trace pilot
+description: Discuss a bounded synthetic integration-testing project without sharing private data.
+title: "[Workflow test pilot] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a public, nonbinding enquiry. Do not share API keys, private endpoints, personal records, real event logs or confidential source code.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Delivery integration category
+      options:
+        - CRM / customer journey
+        - Webhook or API integration
+        - AI-assisted workflow
+        - Other integration
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      placeholder: "Example: A synthetic event should create one effect and a recorded acknowledgement."
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Suspected event lifecycle gap
+      placeholder: "Example: A provider may retry after a timeout, which risks duplicate work."
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I have not shared credentials, personal information, or confidential customer data.
+          required: true

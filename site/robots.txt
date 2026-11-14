@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://esheenj.github.io/integration-delivery-trace-inspector/sitemap.xml

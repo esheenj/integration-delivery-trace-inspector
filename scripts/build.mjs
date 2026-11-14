@@ -1,0 +1,10 @@
+import {mkdir,rm,copyFile,readFile,writeFile} from 'node:fs/promises';
+import {inspectTrace} from '../src/inspect.mjs';
+await rm('dist',{recursive:true,force:true});
+await mkdir('dist',{recursive:true});
+for(const name of ['index.html','style.css','app.mjs','robots.txt','sitemap.xml'])await copyFile('site/'+name,'dist/'+name);
+await copyFile('src/inspect.mjs','dist/inspect.mjs');
+const source=JSON.parse(await readFile('examples/fictional-delivery-trace.json','utf8'));
+inspectTrace(source);
+await writeFile('dist/sample.mjs','export default '+JSON.stringify(source)+';\n');
+console.log('Built standalone offline trace inspector in dist/');

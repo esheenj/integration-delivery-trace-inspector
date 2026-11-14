@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1319">
+<meta name="description" content="Inspect fictional or sanitized integration delivery histories for multiple recorded effects, overdue acknowledgements and reconciliation gaps. Entirely offline.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="canonical" href="https://esheenj.github.io/integration-delivery-trace-inspector/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Integration Delivery Trace Inspector | Esheen Labs">
+<meta property="og:description" content="Trace what happened between a delivery, its business effect and its acknowledgement. An offline diagnostic lab for synthetic evidence.">
+<meta property="og:url" content="https://esheenj.github.io/integration-delivery-trace-inspector/">
+<meta name="twitter:card" content="summary">
+<title>Integration Delivery Trace Inspector — Esheen Labs</title>
+<link rel="stylesheet" href="./style.css"><script type="module" src="./app.mjs"></script>
+</head><body>
+<a class="skip" href="#workbench">Skip to inspection</a>
+<div class="shell">
+<header class="top">
+ <a class="brand" href="https://github.com/esheenj/integration-delivery-trace-inspector"><span class="mark">Σ</span><span>ESHEEN <b>LABS</b><small>ENGINEERING INTELLIGENCE</small></span></a>
+ <div class="top-status"><span class="dot"></span> OFFLINE DIAGNOSTICS <span class="edition">OSS / 019</span></div>
+</header>
+<main>
+<section class="hero">
+ <div class="eyebrow"><span class="line"></span> DELIVERY INTELLIGENCE / EVENT EVIDENCE</div>
+ <h1>A delivery happened.<br><em>What happened next?</em></h1>
+ <p>Inspect the chain from receipt to business effect to acknowledgement. Identify repeated deliveries, possible duplicate effects, missing receipts and unresolved work—without connecting to a customer's systems.</p>
+ <div class="traits"><span>NO WEBHOOK RECEIVER</span><span>EXPLAINABLE FLAGS</span><span>NO DATA UPLOAD</span></div>
+</section>
+<section class="workspace" id="workbench" aria-labelledby="inspect-title">
+ <div class="head"><div><span class="eyebrow">01 / SUPPLIED HISTORY</span><h2 id="inspect-title">Inspect an event timeline</h2></div><button class="outline" type="button" id="restore">Restore synthetic sample ↗</button></div>
+ <div class="explain-input"><strong>Input is strictly structural JSON.</strong> Each record needs an event ID, tenant, route, operation ID, delivery ID, state and timestamp. Committed effects also need an effect ID. We reject payloads and other unexpected fields rather than silently ingesting private logs.</div>
+ <div class="editor"><div class="editor-head"><label for="source">Event trace JSON</label><span>OFFLINE INPUT / MAXIMUM 500 EVENTS</span></div>
+ <textarea id="source" spellcheck="false" aria-describedby="editor-hint"></textarea>
+ <div class="editor-footer"><p id="editor-hint">The example uses seven fictional operations, a fixed evaluation time and explicit timeout policies. Results change only when the supplied data changes.</p><button id="inspect" type="button" class="primary">Analyze supplied records <span aria-hidden="true">→</span></button></div></div>
+ <p class="error" id="inputError" role="alert" hidden></p>
+</section>
+<section class="results" id="results" aria-labelledby="results-title" hidden>
+ <div class="head"><div><span class="eyebrow">02 / DIAGNOSTIC EVIDENCE</span><h2 id="results-title">Inspection report</h2></div><span class="status" id="status" role="status" aria-live="polite">SUPPLIED RECORDS ONLY</span></div>
+ <div class="metrics"><div><span>EVENTS</span><strong id="events">—</strong></div><div><span>OPERATIONS</span><strong id="operations">—</strong></div><div><span>HIGH PRIORITY</span><strong id="high">—</strong></div><div><span>REVIEW</span><strong id="reviews">—</strong></div><div><span>NOTES</span><strong id="notes">—</strong></div></div>
+ <p class="result-note" id="resultNote"></p>
+ <div class="section-title"><div><span class="eyebrow">RECORDED OPERATION STATUS</span><h3>Operation by operation</h3></div><span id="scopeLabel">FIXED-TIME INSPECTION</span></div>
+ <div class="table-scroll"><table><thead><tr><th>Operation</th><th>Recorded status</th><th>Receipts</th><th>Effect IDs</th><th>Acks</th></tr></thead><tbody id="operationRows"></tbody></table></div>
+ <div class="section-title"><div><span class="eyebrow">REMEDIATION PRIORITIES</span><h3>What needs investigation</h3></div><span>FLAGS ≠ CERTIFIED INCIDENTS</span></div>
+ <ol id="findings" class="findings"></ol>
+ <div class="export"><button id="exportMarkdown" type="button" class="outline">Download Markdown brief ↓</button><button id="exportJson" type="button" class="outline">Download JSON findings ↓</button><p>No original payloads or customer records are included in reports. Structural identifiers are exported as supplied; use fictional or approved sanitized IDs only.</p></div>
+</section>
+<section class="commercial">
+ <div><span class="eyebrow">03 / TURN DIAGNOSTICS INTO A FIX</span><h2>Find the missing link.<br>Prove the recovery.</h2><p>For one bounded integration, an engineering pilot can compare a synthetic delivery trace against the expected lifecycle, reproduce a failure and define runnable acceptance tests and reconciliation checks.</p>
+ <div class="contact"><a class="pilot" href="mailto:info@sigmacode.co.za?subject=Integration%20delivery%20trace%20pilot%20enquiry">Email Sigma Code about a pilot ↗</a><a class="outline" href="https://github.com/esheenj/integration-delivery-trace-inspector/issues/new?template=pilot.yml" rel="noopener noreferrer">GitHub enquiry form ↗</a></div>
+ <p class="disclaimer">An enquiry is not a purchase or confirmed service. Do not send logs containing real customer details, credentials or private endpoints.</p>
+ </div>
+ <div class="scope-card"><span class="eyebrow">ONE WORKFLOW · FOUR PROOFS</span><div><strong>01</strong><span>Model the intended delivery and business effect</span></div><div><strong>02</strong><span>Reproduce the failure using synthetic records</span></div><div><strong>03</strong><span>Design and run bounded integration tests</span></div><div><strong>04</strong><span>Document recovery and owner handoff</span></div></div>
+</section>
+<section class="related"><span class="eyebrow">COMPANION DEVELOPER TOOLS</span><h2>From evidence to resilience.</h2><div class="related-grid">
+ <a href="https://esheenj.github.io/workflow-failure-test-builder/"><strong>Workflow Failure Test Builder</strong><span>Convert this finding into an acceptance scenario ↗</span></a>
+ <a href="https://esheenj.github.io/webhook-idempotency-lab/"><strong>Webhook Idempotency Lab</strong><span>Understand retry and duplicate decisions ↗</span></a>
+ <a href="https://esheenj.github.io/integration-reliability-assessment/"><strong>Integration Reliability Assessment</strong><span>Review the wider integration controls ↗</span></a>
+ </div></section>
+</main>
+<footer><span>© 2026 ESHEEN LABS · ORIGINAL MIT SOFTWARE</span><div><a href="https://sigmacode.co.za/">Sigma Code</a><a href="https://esheenj.github.io/compound-intelligence-starter/">All public MVPs</a><a href="https://github.com/esheenj/integration-delivery-trace-inspector">Source & tests ↗</a></div></footer>
+</div></body></html>
