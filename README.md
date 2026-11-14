@@ -1,8 +1,14 @@
-# Integration Delivery Trace Inspector
+# Delivery Trace Inspector
 
 **A delivery happened. What happened next?**
 
 An original MIT-licensed, offline diagnostic explorer for synthetic or strictly sanitized CRM, webhook, API and AI integration histories. It traces the supplied structural events from receipt to effect commit to acknowledgement, highlighting suspicious repeated effects and missing evidence. It is **not** an event receiver, production monitor or certification tool.
+
+**Part of Sigma Code's Integration Reliability Tools.** Built for developers, integration owners and technical teams reviewing what supplied CRM, webhook, API or AI workflow event records appear to show.
+
+**What it helps you see:** the recorded path from receipt through effect commit and acknowledgement, including potential duplicate-effect evidence, overdue acknowledgements, stalled operations and reconciliation gaps. Export findings for a human investigation or a scoped reliability-testing pilot.
+
+**What it cannot establish:** whether a real production transaction happened twice or whether missing records prove a service failed. Results depend entirely on the synthetic or authorized sanitized event history you provide. The tool is not a live monitor, incident-response service or certification. See the [commercial enquiry](#commercial-enquiry) for a separately scoped review.
 
 **Live demo:** https://esheenj.github.io/integration-delivery-trace-inspector/
 
